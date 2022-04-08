@@ -1,0 +1,27 @@
+:root {
+    --main-color: #333333;
+    --sub-color1: #fdfdfd;
+    --sub-color2: #ebebeb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--sub-color1);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+

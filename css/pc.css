@@ -1,7 +1,13 @@
 
 body {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 /* 헤더 */
@@ -396,8 +402,8 @@ footer p {
 
 .title {
     width: 1440px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -426,16 +432,16 @@ footer p {
 
 .about-box {
     width: 1440;
-    height: 700px;
+    height: 560px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 57px;
 }
 
 .myphoto{
     width: 480px;
-    height: 700px;
+    height: 560px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -446,8 +452,8 @@ footer p {
 }
 
 .myphoto-img {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     background-image: url(../images/my-photo.jpg);
     background-repeat: no-repeat;
@@ -458,7 +464,7 @@ footer p {
 
 .about-me {
     width: 620px;
-    height: 700px;
+    height: 560px;
     padding: 20px;
     padding-left: 40px;
     color: var(--sub-color1);
@@ -472,13 +478,14 @@ footer p {
 .about-me ul {
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .about-me ul li {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     margin: 5px 0;
+    margin-left: 20px;
 }
 
 .about-me > ul > li > span {
@@ -514,17 +521,16 @@ footer p {
     z-index: 10;
 }
 
-
 .skills-items:hover > img {
     transform: scale(0%);
-    transition: 2s;
+    transition: 1s;
 }
 
 .skills-items:hover .skills-items-text {
     width: 300px;
     height: 300px;
     opacity: 1;
-    transition: 3s;
+    transition: 1s;
 }
 
 .skills-items .skills-items-text {
@@ -536,5 +542,230 @@ footer p {
     opacity: 0;
     display: block;
     margin-top: -305px;
-    outline: 1px solid red;
+}
+
+/* portfolio */
+
+#Portfolio {
+  background-color: var(--bg-color);
+}
+
+.portfolio-grid {
+  width: 1440px;
+  height: 560px;
+  margin-bottom: 57px;
+  background-color: var(--sub-color1);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 220px 220px 220px 220px; 
+  grid-template-rows: 220px 220px;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+  padding: 45px;
+}
+
+.portfolio-grid-item {
+  width: 220px;
+  height: 220px;
+  background-color: var(--main-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--sub-color1);
+  overflow: hidden;
+  border-radius: 30px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio-grid-item-img {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+}
+
+.portfolio-grid-item-info {  
+  display: none;
+  background-color: #8B9FE4;
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0%);
+}
+
+.portfolio-grid-item-info > a {
+  color: var(--sub-color1);
+}
+
+.portfolio-grid-item-info > p {
+  line-height: 35px;
+}
+
+.portfolio-grid-item-info > a span {
+  font-weight: 700;
+}
+
+.portfolio-grid-item:hover .portfolio-grid-item-info{
+  display: block;
+  background-color: #8B9FE4;
+  width: 220px;
+  height: 220px;
+  border-radius: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  transform: scale(100%);
+}
+
+/* 포트폴리오 상세 */
+
+.portfolio-work-process {
+  width: 1440px;
+  background-color: var(--sub-color1);
+}
+
+.portfolio-work-process-title {
+  width: 1440px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;  
+  border-top: 5px solid var(--main-color);
+  border-bottom: 1px solid #ccc;
+}
+
+.portfolio-list {
+  background-color: var(--main-color);
+  color: var(--sub-color1);
+}
+
+.portfolio-list a {
+  color: var(--sub-color1);
+}
+
+.site-view-chonbang {
+  background-color: #F9941E;
+}
+
+.site-view-chonbang > a {
+  color: var(--sub-color1);
+}
+
+.writing {
+  padding-top: 50px;
+  background-color: var(--sub-color1);
+}
+
+.writing table {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.writing th {
+  vertical-align: top;
+  width: 150px;
+  padding: 5px;
+}
+
+.writing td {
+  padding: 5px;
+}
+
+.portfolio-color {
+  display: flex;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.color-circle:first-child {
+  margin-left: 0;
+}
+
+.color-circle:last-child {
+  margin-right: 0;
+}
+
+.design-box {
+  width: 1440px;
+  margin-top: 20px;
+}
+
+.design-box-title {  
+  width: 1440px;
+  height: 70px;
+  background-color: #F9941E;
+  color: var(--sub-color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.before-after-box {
+  display: flex;
+  font-size: 18px;
+}
+
+.before {
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #ccc;
+  padding-bottom: 50px;
+}
+
+.before p {
+  margin-top: 20px;
+}
+
+.after {
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.after p {
+  margin-top: 20px;
+}
+
+.portfolio-end-box {
+  width: 1440px;
+  height: 40px;
+  background-color: var(--main-color);
+}
+
+.list-btn-bottom {
+  background-color: var(--main-color);
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.list-btn-bottom a {
+  color: var(--sub-color1);
+}
+
+.list-btn-bottom-box {
+  width: 1440px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: end;
 }

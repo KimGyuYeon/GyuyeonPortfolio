@@ -8,7 +8,7 @@
 
     <!-- google wepfont -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- css-->
     <link rel="stylesheet" href="./css/default.css">
@@ -18,16 +18,62 @@
      <!-- jQuery cdn -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="./js/main.js"></script>
-
 </head>
 <body>        
 
-    <!--해더-->
-    <div class="header-component">
-        <script src="./components/header.js"></script>
-    </div>
+    <div class="gnb-toggle-box mobile-only"></div>
+
+    <header id="main-header">
+        <button class="toggle-btn mobile-only">
+            <img src="./images/toggle-btn.svg" alt="메뉴열림">
+        </button>        
+        <div id="gnb">
+            <div class="gnb-close-container mobile-only">
+                <button class="close-btn">
+                    <img src="./images/close-btn.svg" alt="메뉴닫힘">
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <a href="#home">
+                        <div class="button-container">
+                            <span class="mas">Home</span>
+                          <button type="button" name="Hover" class="pc-only">Home</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        <div class="button-container">
+                            <span class="mas">About</span>
+                          <button type="button" name="Hover" class="pc-only">About</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills">
+                        <div class="button-container">
+                            <span class="mas">Skills</span>
+                          <button type="button" name="Hover" class="pc-only">Skills</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio">
+                        <div class="button-container">
+                            <span class="mas">Portfolio</span>
+                          <button type="button" name="Hover" class="pc-only">Portfolio</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <div class="button-container">
+                            <span class="mas">Contact</span>
+                          <button type="button" name="Hover" class="pc-only">Contact</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
     
-    <section class="main-content">
+    <section class="main-content" id="home">
             <div class="main-content-text">
                 <p class="portfolio-text">PORTFOLIO</p>
                 <p class="portfolio-text">PORTFOLIO</p>
@@ -45,11 +91,295 @@
             </div>
     </section>
 
-    <!--푸터-->
-    <div class="footer-component">
-        <script src="./components/footer.js"></script>
-    </div>
+    <section id="about">
+        <div class="container">
+            <div class="title">
+                <h1>About</h1>
+            </div>
+            <div class="about-box">
+                <div class="myphoto">
+                    <div class="myphoto-img"></div>
+                    <div class="myphoto-info">
+                        "함께 일할 멋진 퍼블리셔를 찾고 계신가요?"<br>
+                        🖤책임감을 가지고 맡은 일은 끝까지 해내요<br>
+                        🖤새로운 도전을 두려워하지 않아요<br>
+                        🖤열린자세, 긍정적인 마인드를 가지고 있어요<br>
+                    </div>
+                </div>
+                <div class="about-body">
+                    <div class="about-info">
+                        <div class="about-title">
+                            <h1>Profile</h1>
+                        </div>
+                        <div class="about-detail">
+                            <p>🖤<span> 이름</span> &nbsp; 김규연</p>
+                            <p>🖤<span> 생년월일</span> &nbsp; 1993. 12. 25</p>
+                            <p>🖤<span> 전화번호</span> &nbsp; 010-9983-9974</p>
+                            <p>🖤<span> 이메일</span> &nbsp; comely1993@gamil.com</p>
+                        </div>
+                    </div>
+                    <div class="about-info">
+                        <div class="about-title">
+                            <h1>License</h1>
+                        </div>
+                        <div class="about-detail">
+                            <p>🖤 GTQ 그래픽기술자격 1급</p>
+                            <p>🖤 ITQ 정보기술자격</p>
+                            <p>🖤 운전면허 2종 보통</p>
+                        </div>
+                    </div>
+                    <div class="about-info">
+                        <div class="about-title">
+                            <h1>Education</h1>
+                        </div>
+                        <div class="about-detail">
+                            <p>🖤 2021.11.25 ~ 2022.04.13</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[디지털디자인]영상콘텐츠를 활용한 UI/UX웹디자인(웹퍼블리셔)</p>
+                            <p>🖤 2015.06 ~ 2015.08</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B2B B2C 전략마케터 전문가 과정</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
 
+    <section id="skills">
+        <div class="container">
+            <div class="title">
+                <h1 style="color: var(--sub-color1);">Skills</h1>
+            </div>
+            <div class="skills-box">
+                <div class="skills-grid-items">
+                    <div class="skills-gird-item">
+                        <h1>Html</h1>
+                        <div class="skills-line-box">
+                            <div class="skills-line"></div>
+                            <div class="skills-line2"></div>
+                            <p>90%</p>
+                        </div>
+                        <p>웹표준 접근성을 고려하여 제작할 수 있습니다. <br> &nbsp;</p> 
+                    </div>
+                </div>
+                <div class="skills-grid-items">
+                    <div class="skills-gird-item">
+                        <h1>Css</h1>
+                        <div class="skills-line-box">
+                            <div class="skills-line"></div>
+                            <p>90%</p>
+                        </div>
+                        <p>트렌지션, 애니메이션 사용이 가능합니다. <br>
+                            반응형 페이지 제작 가능합니다.</p> 
+                    </div>
+                </div>
+                <div class="skills-grid-items">
+                    <div class="skills-gird-item">
+                        <h1>Javascript/jQuery</h1>
+                        <div class="skills-line-box">
+                            <div class="skills-line"></div>
+                            <p>60%</p>
+                        </div>
+                        <p>기초 문법과 제어문을 숙지하고 기능을 구현할 수 있습니다. <br>&nbsp;</p> 
+                    </div>
+                </div>
+                <div class="skills-grid-items">
+                    <div class="skills-gird-item">
+                        <h1>Photoshop, Illustrator</h1>
+                        <div class="skills-line-box">
+                            <div class="skills-line"></div>
+                            <p>90%</p>
+                        </div>
+                        <p>이미지 편집과 상품 상세페이지 제작이 가능합니다. <br>
+                            로고, 일러스트 제작이 가능합니다.</p> 
+                    </div>
+                </div>
+                <div class="skills-grid-items">
+                    <div class="skills-gird-item">
+                        <h1>git, Figma</h1>
+                        <div class="skills-line-box">
+                            <div class="skills-line"></div>
+                            <p>90%</p>
+                        </div>
+                        <p>피그마를 이용한 공동 작업이 가능합니다. <br>
+                            공동 개발의 효율적인 버전관리를 위한 git 사용 가능합니다.</p> 
+                    </div>
+                </div>
+                <div class="skills-grid-items">
+                    <div class="skills-gird-item">
+                        <h1>Premiere/Effect</h1>
+                        <div class="skills-line-box">
+                            <div class="skills-line"></div>
+                            <p>90%</p>
+                        </div>
+                        <p> 간단한 자막 삽입, 도형툴, 효과넣기 등 편집이 가능합니다. <br>&nbsp;</p> 
+                    </div>
+                </div>
+            </div>
+    </section> <!--skills-->
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="title">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="portfolio-box">
+                <div class="portfolio-list-btn-box">
+                    <button class="list-all">전체</button>
+                    <button class="list-responsive">반응형</button>
+                    <button class="list-pc">PC</button>
+                    <button class="list-mobile">Mobile</button>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-grid-item">
+                        <div class="portfolio-grid-item-img">
+                            <a href="chonbang.html">
+                                <img src="./images/chonbang.png" alt="전방텍스타일">
+                                <p>전방텍스타일</p>
+                            </a>
+                        </div>
+                        <div class="portfolio-grid-item-info pc-only">
+                            <a href="chonbang.html">
+                                <p><span>작업기간</span> 14일</p>
+                                <p><span>기여도</span> 팀프로젝트 40%</p>
+                                <p><span>구분</span> 반응형</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid-item">
+                        <div class="portfolio-grid-item-img">
+                            <a href="chonbang.html">
+                                <img src="./images/chonbang.png" alt="전방텍스타일">
+                                <p>전방텍스타일</p>
+                            </a>
+                        </div>
+                        <div class="portfolio-grid-item-info pc-only">
+                            <a href="chonbang.html">
+                                <p><span>작업기간</span> 3일</p>
+                                <p><span>기여도</span> 100% 개인작업물</p>
+                                <p><span>구분</span> 반응형</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid-item">
+                        <div class="portfolio-grid-item-img">
+                            <a href="chonbang.html">
+                                <img src="./images/chonbang.png" alt="전방텍스타일">
+                                <p>전방텍스타일</p>
+                            </a>
+                        </div>
+                        <div class="portfolio-grid-item-info pc-only">
+                            <a href="chonbang.html">
+                                <p><span>작업기간</span> 2일</p>
+                                <p><span>기여도</span> 100% 개인작업물</p>
+                                <p><span>구분</span> PC</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid-item">
+                        <div class="portfolio-grid-item-img">
+                            <a href="chonbang.html">
+                                <img src="./images/chonbang.png" alt="전방텍스타일">
+                                <p>전방텍스타일</p>
+                            </a>
+                        </div>
+                        <div class="portfolio-grid-item-info pc-only">
+                            <a href="chonbang.html">
+                                <p><span>작업기간</span> 14일</p>
+                                <p><span>기여도</span> 팀프로젝트 40%</p>
+                                <p><span>구분</span> 반응형</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid-item">
+                        <div class="portfolio-grid-item-img">
+                            <a href="chonbang.html">
+                                <img src="./images/chonbang.png" alt="전방텍스타일">
+                                <p>전방텍스타일</p>
+                            </a>
+                        </div>
+                        <div class="portfolio-grid-item-info pc-only">
+                            <a href="chonbang.html">
+                                <p><span>작업기간</span> 14일</p>
+                                <p><span>기여도</span> 팀프로젝트 40%</p>
+                                <p><span>구분</span> 반응형</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid-item">
+                        <div class="portfolio-grid-item-img">
+                            <a href="chonbang.html">
+                                <img src="./images/chonbang.png" alt="전방텍스타일">
+                                <p>전방텍스타일</p>
+                            </a>
+                        </div>
+                        <div class="portfolio-grid-item-info pc-only">
+                            <a href="chonbang.html">
+                                <p><span>작업기간</span> 14일</p>
+                                <p><span>기여도</span> 팀프로젝트 40%</p>
+                                <p><span>구분</span> 반응형</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid-item">
+                        <div class="portfolio-grid-item-img">
+                            <a href="chonbang.html">
+                                <img src="./images/chonbang.png" alt="전방텍스타일">
+                                <p>전방텍스타일</p>
+                            </a>
+                        </div>
+                        <div class="portfolio-grid-item-info pc-only">
+                            <a href="chonbang.html">
+                                <p><span>작업기간</span> 14일</p>
+                                <p><span>기여도</span> 팀프로젝트 40%</p>
+                                <p><span>구분</span> 반응형</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid-item">
+                        <div class="portfolio-grid-item-img">
+                            <a href="chonbang.html">
+                                <img src="./images/chonbang.png" alt="전방텍스타일">
+                                <p>전방텍스타일</p>
+                            </a>
+                        </div>
+                        <div class="portfolio-grid-item-info pc-only">
+                            <a href="chonbang.html">
+                                <p><span>작업기간</span> 14일</p>
+                                <p><span>기여도</span> 팀프로젝트 40%</p>
+                                <p><span>구분</span> 반응형</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section><!--portfolio-->
+
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h1 style="color: var(--sub-color1);">Contact</h1>
+            </div>
+            <div class="contact-box">
+                <div class="closing">
+                    <h1>연락을 기다리겠습니다. <br> 감사합니다. </h1>
+                </div>
+                <div class="contact-info">
+                    <p>010.9983.9974</p>
+                    <p>comely1993@gmail.com</p>
+                </div>
+                <div class="sns-box">
+                    <a href="#"><img src="./images/instagram.svg" alt=""></a>
+                    <a href="#"><img src="./images/kakao-talk-fill.svg" alt=""></a>
+                    <a href="#"><img src="./images/github.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© COPYRIGHT ⓒ 2022 KIMGYUYEON. ALL RIGHTS RESERVED.  <br>
+            본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다. <br class="mobile-only"> 사용된 일부 이미지 및 폰트 등은 별도의 출처가 있습니다.</p>
+        </div>
+    </section>
 
 </body>
 </html>

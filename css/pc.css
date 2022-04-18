@@ -1,24 +1,25 @@
 
 body {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 }
 
-button {
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+.mobile-only {
+  display: none;
 }
 
 /* 헤더 */
 
 #main-header {
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: var(--main-color);
     display: flex;
     justify-content: end;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
 #main-header #gnb ul {
@@ -120,7 +121,8 @@ button {
 
 .main-content {
     width: 100%;
-    height: calc(100vh - 140px);
+    height: 100vh;
+    padding-top: 80px;
     background-color: #333;
     display: flex;
     flex-direction: column;
@@ -131,9 +133,9 @@ button {
 .main-content-text .portfolio-text{
     text-align: center;
     color: #fff;
-    font-size: 160px;
+    font-size: 140px;
     letter-spacing: 8px;
-    font-weight: 400;
+    font-weight: 500;
     /*Create overlap*/
     margin: 0;
     line-height: 0;
@@ -158,8 +160,8 @@ button {
 .main-content-text1 .job-text{
     text-align: center;
     color: #fff;
-    font-size: 46px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 500;
     /*Create overlap*/
     margin: 0;
     line-height: 0;
@@ -184,9 +186,9 @@ button {
 .main-content-text2 .name-text{
     text-align: center;
     color: #fff;
-    font-size: 46px;
+    font-size: 40px;
     letter-spacing: 8px;
-    font-weight: 400;
+    font-weight: 500;
     /*Create overlap*/
     margin: 0;
     line-height: 0;
@@ -371,259 +373,320 @@ button {
     }
 }
 
- /* 푸터 */
-
-footer {
-    width: 100%;
-    height: 60px;
-    background-color: #333;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-footer p {
-    margin-left: 20px;
-    font-size: 10px;
-    font-weight: 400;
-    color: var(--sub-color1);
-}
 
 /* about */
 
 #about {    
     background-color: var(--bg-color);
-}
-
-.content {
-    width: 1440px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
-    width: 1440px;
-    margin-top: 70px;
-    margin-bottom: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title-box {
-    width: 300px;
-    height: 40px;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title-box p {
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--sub-color1);
-}
-
-.title .title-line {
-    width: 1140px;
-    height: 1px;
-    background: rgba(51, 51, 51, 0.5);
+    padding-top: 60px;
+    padding-bottom: 40px;
+    color: var(--main-color);
+    text-align: center;
+    font-family: 'Hahmlet', serif;
 }
 
 .about-box {
-    width: 1440;
-    height: 560px;
+    width: 1200px;
+    height: 550px;  
+    border: 1px solid var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 57px;
 }
 
 .myphoto{
-    width: 480px;
-    height: 560px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    border-radius: 30px 0 0 30px;
-    border: 1px solid #333;
+    margin-right: 50px;
 }
 
 .myphoto-img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-image: url(../images/my-photo.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-bottom: 30px;
-}
-
-.about-me {
-    width: 620px;
-    height: 560px;
-    padding: 20px;
-    padding-left: 40px;
-    color: var(--sub-color1);
-    background: var(--main-color);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 0 30px 30px 0;
-}
-
-.about-me ul {
-    font-size: 24px;
-    font-weight: 500;
     margin-bottom: 20px;
 }
 
-.about-me ul li {
-    font-size: 16px;
-    font-weight: 400;
-    margin: 5px 0;
-    margin-left: 20px;
+.myphoto-info {
+  text-align: left;
 }
 
-.about-me > ul > li > span {
-    font-weight: 700;
-    color: rgba(225, 225, 225, 0.9);
+.about-body {
+  width: 520px;
+  color: var(--sub-color1);
+}
+
+.about-info {
+  width: 550px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.about-info:nth-child(2) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.about-title {
+  width: 120px;
+}
+
+.about-title > h1 {  
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--sub-color1);
+}
+
+.about-detail span{
+  font-weight: 500;
 }
 
 /* skills */
 
+#skills {    
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .skills-box {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 300px 300px;
-    grid-row-gap: 30px;
-    grid-column-gap: 30px;
-    margin-bottom: 80px;
+  width: 1200px;
+  height: 550px;  
+  border: 1px solid var(--sub-color1);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 33.3% 33.3% 33.3%;
+  grid-template-columns: 50% 50%;
+  padding: 20px;
+  color: var(--sub-color1);
 }
 
-.skills-items {
-    width: 300px;
-    height: 300px;
-    background-color: var(--main-color);
-    color: var(--sub-color1);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-    cursor: pointer;
+.skills-grid-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
-.skills-items > img {
-    width: 300px;
-    height: 300px;
-    z-index: 10;
+.skills-line-box {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
-.skills-items:hover > img {
-    transform: scale(0%);
-    transition: 1s;
+.skills-line {
+  width: 300px;
+  height: 3px;
+  background-color: var(--sub-color1);
+  margin-right: 20px;
+  position: relative;
+  transform-origin: left;
+  transform: translateX(0);
 }
 
-.skills-items:hover .skills-items-text {
-    width: 300px;
-    height: 300px;
-    opacity: 1;
-    transition: 1s;
-}
-
-.skills-items .skills-items-text {
-    width: 300px;
-    height: 300px;
-    padding: 20px;
-    font-size: 16px;
-    text-align: justify;
-    opacity: 0;
-    display: block;
-    margin-top: -305px;
+.skills-line:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background-color: greenyellow;
+  transform-origin: right;
+  transition: 1s;
 }
 
 /* portfolio */
 
-#Portfolio {
-  background-color: var(--bg-color);
-}
-
-.portfolio-grid {
-  width: 1440px;
-  height: 560px;
-  margin-bottom: 57px;
+#portfolio {    
   background-color: var(--sub-color1);
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 220px 220px 220px 220px; 
-  grid-template-rows: 220px 220px;
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
-  padding: 45px;
-}
-
-.portfolio-grid-item {
-  width: 220px;
-  height: 220px;
-  background-color: var(--main-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: var(--sub-color1);
-  overflow: hidden;
-  border-radius: 30px;
-  font-size: 16px;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+}
+
+.portfolio-box {
+  width: 1200px;
+  height: 550px;  
+  border: 1px solid var(--main-color);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+}
+
+.portfolio-list-btn-box {
+  width: 220px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.portfolio-list-btn-box > button {
+  padding: 10px;
+  height: 40px;
+  background-color: var(--main-color);
+  color: var(--sub-color1);
+  border: none;
   cursor: pointer;
 }
 
-.portfolio-grid-item-img {
-  width: 220px;
-  height: 220px;
-  position: absolute;
+.portfolio-grid {
+  width: 800px;
+  height: 400px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 30px;
 }
 
-.portfolio-grid-item-info {  
-  display: none;
-  background-color: #8B9FE4;
-  width: 220px;
-  height: 220px;
-  position: absolute;
+.portfolio-grid-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(0%);
 }
 
-.portfolio-grid-item-info > a {
+.portfolio-grid-item-img {
+  width: 200px;
+  height: 200px;
+  background-color: var(--main-color);  
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.portfolio-grid-item-img > a {
   color: var(--sub-color1);
 }
 
-.portfolio-grid-item-info > p {
-  line-height: 35px;
-}
-
-.portfolio-grid-item-info > a span {
-  font-weight: 700;
-}
-
-.portfolio-grid-item:hover .portfolio-grid-item-info{
-  display: block;
-  background-color: #8B9FE4;
-  width: 220px;
-  height: 220px;
-  border-radius: 30px;
+.portfolio-grid-item-info {
   position: absolute;
+  transform: scale(0.1);
+  opacity: 0;
+}
+
+.portfolio-grid-item:hover .portfolio-grid-item-info{  
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  background-color: var(--main-color);
+  transition: 1s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.portfolio-grid-item-info a {
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 1s;
-  transform: scale(100%);
+  flex-direction: column;
+  color: var(--sub-color1);
+}
+
+/* contact */
+
+#contact {    
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  position: relative;
+}
+
+.contact-box {
+  width: 1200px;
+  height: 550px;  
+  background-color: var(--sub-color1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-box h1 {
+  font-size: 30px;
+}
+
+.contact-box p {
+  font-size: 14px;
+}
+
+.closing {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.sns-box a img {
+  width: 30px;
+  height: 30px;
+}
+
+.sns-box a:nth-child(2) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: var(--main-color);
+  color: var(--sub-color1);
+  font-size: 8px;
+  position: absolute;
+  bottom: 0;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 /* 포트폴리오 상세 */

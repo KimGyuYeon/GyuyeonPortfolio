@@ -14,10 +14,13 @@
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 767px)">
     <link rel="stylesheet" href="./css/pc.css" media="screen and (min-width: 768px)">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
      <!-- jQuery cdn -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="./js/main.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>        
 
@@ -154,8 +157,9 @@
                     <div class="skills-gird-item">
                         <h1>Html</h1>
                         <div class="skills-line-box">
-                            <div class="skills-line"></div>
-                            <div class="skills-line2"></div>
+                            <div class="skills-line">                                
+                                <div class="skills-line2" data-aos="fade-right"></div>
+                            </div>
                             <p>90%</p>
                         </div>
                         <p>웹표준 접근성을 고려하여 제작할 수 있습니다. <br> &nbsp;</p> 
@@ -165,7 +169,9 @@
                     <div class="skills-gird-item">
                         <h1>Css</h1>
                         <div class="skills-line-box">
-                            <div class="skills-line"></div>
+                            <div class="skills-line">                                
+                                <div class="skills-line2" data-aos="fade-right"></div>
+                            </div>
                             <p>90%</p>
                         </div>
                         <p>트렌지션, 애니메이션 사용이 가능합니다. <br>
@@ -176,7 +182,9 @@
                     <div class="skills-gird-item">
                         <h1>Javascript/jQuery</h1>
                         <div class="skills-line-box">
-                            <div class="skills-line"></div>
+                            <div class="skills-line">                                
+                                <div class="skills-line3" data-aos="fade-right"></div>
+                            </div>
                             <p>60%</p>
                         </div>
                         <p>기초 문법과 제어문을 숙지하고 기능을 구현할 수 있습니다. <br>&nbsp;</p> 
@@ -186,7 +194,9 @@
                     <div class="skills-gird-item">
                         <h1>Photoshop, Illustrator</h1>
                         <div class="skills-line-box">
-                            <div class="skills-line"></div>
+                            <div class="skills-line">                                
+                                <div class="skills-line2" data-aos="fade-right"></div>
+                            </div>
                             <p>90%</p>
                         </div>
                         <p>이미지 편집과 상품 상세페이지 제작이 가능합니다. <br>
@@ -197,7 +207,9 @@
                     <div class="skills-gird-item">
                         <h1>git, Figma</h1>
                         <div class="skills-line-box">
-                            <div class="skills-line"></div>
+                            <div class="skills-line">                                
+                                <div class="skills-line2" data-aos="fade-right"></div>
+                            </div>
                             <p>90%</p>
                         </div>
                         <p>피그마를 이용한 공동 작업이 가능합니다. <br>
@@ -208,7 +220,9 @@
                     <div class="skills-gird-item">
                         <h1>Premiere/Effect</h1>
                         <div class="skills-line-box">
-                            <div class="skills-line"></div>
+                            <div class="skills-line">                                
+                                <div class="skills-line2" data-aos="fade-right"></div>
+                            </div>
                             <p>90%</p>
                         </div>
                         <p> 간단한 자막 삽입, 도형툴, 효과넣기 등 편집이 가능합니다. <br>&nbsp;</p> 
@@ -216,6 +230,13 @@
                 </div>
             </div>
     </section> <!--skills-->
+
+    <script>
+        AOS.init({
+            delay: 700, // values from 0 to 3000, with step 50ms
+            duration: 3000,
+        });
+      </script>
 
     <section id="portfolio">
         <div class="container">

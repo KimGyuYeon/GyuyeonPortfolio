@@ -501,24 +501,29 @@ body {
 
 .skills-line {
   width: 300px;
-  height: 3px;
+  height: 6px;
   background-color: var(--sub-color1);
   margin-right: 20px;
   position: relative;
-  transform-origin: left;
-  transform: translateX(0);
+  overflow: hidden;
 }
 
-.skills-line:before {
-  content: '';
+.skills-line2 {
+  width: 270px;
+  height: 6px;
+  background: #fc00ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%;
-  height: 100%;
-  background-color: greenyellow;
-  transform-origin: right;
-  transition: 1s;
+}
+
+.skills-line3 {
+  width: 210px;
+  height: 6px;
+  background: #fc00ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
 }
 
 /* portfolio */
@@ -691,14 +696,20 @@ body {
 
 /* 포트폴리오 상세 */
 
+#portfolio-info {
+  width: 1440px;
+  margin: 0 auto;
+}
+
 .portfolio-work-process {
   width: 1440px;
   background-color: var(--sub-color1);
+  margin-top: 20px;
 }
 
 .portfolio-work-process-title {
   width: 1440px;
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -717,11 +728,12 @@ body {
   color: var(--sub-color1);
 }
 
-.site-view-chonbang {
-  background-color: #F9941E;
+.site-view {
+  padding: 5px;
+  border: none;
 }
 
-.site-view-chonbang > a {
+.site-view > a {
   color: var(--sub-color1);
 }
 
@@ -765,70 +777,23 @@ body {
   margin-right: 0;
 }
 
-.design-box {
+.work-intro-box {
   width: 1440px;
   margin-top: 20px;
 }
 
-.design-box-title {  
+.work-intro-title {  
   width: 1440px;
-  height: 70px;
-  background-color: #F9941E;
+  height: 40px;
   color: var(--sub-color1);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.before-after-box {
-  display: flex;
-  font-size: 18px;
-}
-
-.before {
-  width: 720px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 1px solid #ccc;
-  padding-bottom: 50px;
-}
-
-.before p {
-  margin-top: 20px;
-}
-
-.after {
-  width: 720px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 50px;
-}
-
-.after p {
-  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .portfolio-end-box {
   width: 1440px;
   height: 40px;
   background-color: var(--main-color);
-}
-
-.list-btn-bottom {
-  background-color: var(--main-color);
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-
-.list-btn-bottom a {
-  color: var(--sub-color1);
-}
-
-.list-btn-bottom-box {
-  width: 1440px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: end;
 }

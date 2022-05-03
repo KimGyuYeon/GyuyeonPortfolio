@@ -32,4 +32,9 @@ $(function(){
     })
 })
 
-  
+window.onload = function() {
+    // 로딩중  지연시간
+    setTimeout(function(){
+        $('.splash-screen').removeClass('on');
+    },5000)
+}

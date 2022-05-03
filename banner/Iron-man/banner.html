@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironman banner</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .banner {
+            display: block;
+            width: 600px;
+            border: 1px solid #ddd;
+            height: 176px;
+            position: relative;
+            background-repeat: no-repeat;
+            /* 배경 레이어링 */
+            background-image: 
+                url(./images/Iron-Man176.png), 
+                url(./images/Tank.gif);
+            background-position: 
+                0 0, 
+                right top;    
+            background-size: 
+                216px 176px,
+                500px;    
+            color: #fff;
+            text-shadow: 1px 1px 1px #333;
+            overflow: hidden;
+        }
+
+        .banner .logo {
+            position: absolute;
+            width: 366px;
+            height: 100px;
+            background-image: url(./images/logo.png);
+            top: 20px;
+            right: 20px;
+            animation-name: logo;
+            animation-timing-function: ease-in-out;
+            /* 가속도 설정 */
+            animation-duration: 10s;
+            /* 애니메이션 반복 */
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes logo {
+            0% { right: -800px;}
+            9% { right: 25px; }
+            10% { right: 20px; }
+            100% {opacity: 0;}           
+        }
+
+        .banner .adress {
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+        }
+        
+
+    </style>
+    
+</head>
+<body>
+    <a href="marvel.com/movies/iron-man-3" class="banner">
+        <div class="logo">Now on sale!</div>
+        <span class="adress">http://marvel.com/movies/iron-man-3</span>
+    </a>
+</body>
+</html>

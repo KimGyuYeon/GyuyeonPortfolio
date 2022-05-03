@@ -1,0 +1,144 @@
+/* style.css */
+
+@font-face {
+    font-family: 'sansita One';
+    src: url(./sansita-one.regular.ttf);
+}
+
+body {
+    font-family: 'Sansita One', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    width: 1200px;
+    height: 400px;
+    background: #0B1D6F;
+}
+
+.banner > h1{
+    display: flex;
+    font-size: 128px;
+    color: #e9f36c;
+    /* text-shadow: 6px 6px 0 red; */
+    /* 글자테두리효과: 벤더 프리픽스 문법 */
+    -webkit-text-stroke: 2px #e9f36c;
+    -webkit-text-fill-color: #0B1D6F;
+    /* 웹표준 문법 */
+    text-stroke: 2px #e9f36c;
+    text-fill-color: #0B1D6F;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B1D6F;
+}
+
+.banner > .star {
+    position: absolute;
+    /* name | durantion | timing-function | iteration-count */
+    animation: star 1s linear infinite;
+    animation-direction: alternate;
+}
+
+.banner > .star1 {
+    right: 20px;
+    top: 35px;    
+    animation-timing-function: cubic-bezier(0.6, 0.28, 0.735, 0.045);
+}
+
+.banner > .star2 {
+    left: 20px;
+    bottom: 35px;
+    transform: rotate(45deg);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+@keyframes star {
+    0% {
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+.banner > h1 > div {
+    animation: text 0.25s ease-in-out 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.banner > h1 > div:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.banner > h1 > div:nth-child(2) {
+    animation-delay: 1.25s;
+}
+
+.banner > h1 > div:nth-child(3) {
+    animation-delay: 1.50s;
+}
+
+.banner > h1 > div:nth-child(4) {
+    animation-delay: 1.75s;
+}
+
+.banner > h1 > div:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.banner > h1 > div:nth-child(6) {
+    animation-delay: 2.25s;
+}
+
+.banner > h1 > div:nth-child(7) {
+    animation-delay: 2.50s;
+}
+
+.banner > h1 > div:nth-child(8) {
+    animation-delay: 2.75s;
+}
+
+.banner > h1 > div:nth-child(9) {
+    animation-delay: 3s;
+}
+
+.banner > h1 > div:nth-child(10) {
+    animation-delay: 3.25s;
+}
+
+.banner > h1 > div:nth-child(11) {
+    animation-delay: 3.50s;
+}
+
+.banner > h1 > div:nth-child(12) {
+    animation-delay: 3.75s;
+}
+
+.banner > h1 > div:nth-child(13) {
+    animation-delay: 4s;
+}
+@keyframes text {
+    0% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

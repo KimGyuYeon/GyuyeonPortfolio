@@ -431,7 +431,8 @@ body {
   height: 4px; 
   background: #F5F3EE; 
   border-radius: 50%; 
-  animation: Mouse_act 1s ease-out infinite;}
+  animation: Mouse_act 1s ease-out infinite;
+}
 
 
 /* about */
@@ -486,6 +487,12 @@ body {
   text-align: left;
 }
 
+.myphoto-info h1 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 .about-body {
   width: 520px;
   color: var(--sub-color1);
@@ -508,6 +515,7 @@ body {
 
 .about-title {
   width: 120px;
+  margin-right: 10px;
 }
 
 .about-title > h1 {  
@@ -662,10 +670,6 @@ body {
   width: 90%;
 }
 
-.phone-img {
-  height: 150px;
-}
-
 .portfolio-grid-item-img > a {
   color: var(--sub-color1);
 }
@@ -742,11 +746,8 @@ body {
 .sns-box a img {
   width: 30px;
   height: 30px;
-}
-
-.sns-box a:nth-child(2) {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .footer {
